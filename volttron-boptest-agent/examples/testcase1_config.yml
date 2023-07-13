@@ -1,0 +1,22 @@
+{
+  "testcase_name": "testcase1",
+  "initialize":  # for GET/initialize
+  {
+    "start_time": 0,
+    "warmup_period": 0
+  },
+  "scenario": null,
+  "step": 300,
+  "length": 86400,
+
+  "controller":
+  {
+    "type": "pid",  # currently support "pid", "sup", pidTwoZones"
+    "u":
+    {
+      "oveAct_u": 0,
+      "oveAct_activate": 1
+    }
+  }
+
+}

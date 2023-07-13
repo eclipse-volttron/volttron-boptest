@@ -1,0 +1,22 @@
+{
+  "testcase_name": "testcase1",
+  "initialize": null,
+  "scenario":
+  {
+    "time_period": "test_day",
+    "electricity_price": "dynamic"
+  },
+  "step": 300,
+  "length": 1728000,
+
+  "controller":
+  {
+    "type": "pid",  # currently support "pid", "sup", pidTwoZones"
+    "u":
+    {
+      "oveAct_u": 0,
+      "oveAct_activate": 1
+    }
+  }
+
+}

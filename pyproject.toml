@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "volttron-boptest-monorepo"
+version = "0.0.1"
+description = "Monorepo container"
+license = "MIT"
+authors = ["Kefei Mo <kefei.mo@pnnl.gov>"]
+readme = "README.md"
+include = ["VERSION", "README.md"]
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.0.1"
+tag_format = "v$version"
+version_files = [
+    "VERSION",
+    "pyproject.toml:^version",
+#    "volttron-boptest_integration/VERSION",
+#    "volttron-boptest_integration/pyproject.toml:^version",
+#    "volttron-boptest_integration/src/__init__.py:^__version",
+#    "package-b/VERSION",
+#    "package-b/pyproject.toml:^version",
+#    "package-b/package_b/__init__.py:^__version",
+#    "service-c/VERSION",
+#    "service-c/pyproject.toml:^version",
+#    "service-c/service_c/__init__.py:^__version",
+    ]
+update_changelog_on_bump = true
+changelog_incremental = true
+bump_message = "bump: $current_version → $new_version"
+
+
+[tool.poetry.dependencies]
+python = "~3.10"
+
+[tool.poetry.dev-dependencies]
+ipython = "^7.29.0"
+mypy = "0.910"
+flake8 = "4.0.1"
+dunamai = "^1.7.0"
+commitizen = "^2.20.3"
