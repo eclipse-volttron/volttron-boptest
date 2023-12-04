@@ -210,6 +210,11 @@ class BopTestSimIntegrationLocal:
     def put_results(self, point_names: list, start_time: float = -np.inf, final_time: float = np.inf):
         """
         wrapper on PUT/results ('start_time':-np.inf, 'final_time':np.inf)
+
+        Note:  the granularity of the results will always be 30 seconds unless you choose a step shorter
+        than 30 seconds in which case you'll get the results at the time intervals used by integration when simulating.
+        see https://github.com/ibpsa/project1-boptest/issues/439
+
         EXAMPLE
         put_results(point_names=['reaTZon_y'])
         >> {'message': "Queried results data successfully for point names [u'reaTZon_y'].",

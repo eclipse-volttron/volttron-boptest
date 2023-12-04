@@ -64,8 +64,13 @@ jobs:
       # Setup boptest server at local
       #----------------------------------------------
       - name: Git clone Boptest Repo
-        run:
+        run: |
           git clone https://github.com/ibpsa/project1-boptest.git
+          cd project1-boptest
+          git fetch --all --tags
+          git tag
+          git checkout v0.4.0
+          cd ..
 
 #      - name: validate repo
 #        run:
