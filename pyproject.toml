@@ -3,7 +3,7 @@ name = "volttron-boptest-monorepo"
 version = "0.0.1"
 description = "Monorepo container"
 license = "Apache-2.0"
-authors = [VOLTTRON Team <volttron@pnnl.gov>]
+authors = ["VOLTTRON Team <volttron@pnnl.gov>"]
 readme = "README.md"
 include = ["VERSION", "README.md"]
 
